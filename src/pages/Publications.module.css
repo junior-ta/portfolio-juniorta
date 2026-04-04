@@ -1,0 +1,481 @@
+/* ============================================================
+   PUBLICATIONS.MODULE.CSS
+   ============================================================ */
+
+.page {
+  padding-top: 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  padding-bottom: 6rem;
+}
+
+/* ── Page Header ── */
+.pageHeader {
+  padding-top: 3rem;
+  margin-bottom: 3.5rem;
+}
+
+.superLabel {
+  font-family: var(--font-label);
+  font-size: 0.65rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--on-surface-variant);
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.titleRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: end;
+}
+
+.pageTitle {
+  font-family: var(--font-display);
+  font-size: clamp(3.5rem, 8vw, 6.5rem);
+  font-weight: 900;
+  font-style: italic;
+  letter-spacing: -0.04em;
+  line-height: 0.9;
+  color: var(--on-surface);
+}
+
+.pageTitleAccent { color: var(--primary-container); }
+
+.subtitle {
+  font-size: 1rem;
+  color: var(--on-surface-variant);
+  line-height: 1.7;
+  padding-bottom: 0.5rem;
+}
+
+/* ── Featured Section ── */
+.featuredSection {
+  margin-bottom: 1.5rem;
+}
+
+.featuredCard {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  background: var(--surface-container-low);
+  overflow: hidden;
+  border-radius: 2px;
+  position: relative;
+  transition: background var(--transition-med);
+}
+
+.featuredCard:hover { background: var(--surface-container); }
+
+.featuredImageWrap {
+  overflow: hidden;
+}
+
+.featuredImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%);
+  transform: scale(1.05);
+  transition: filter var(--transition-slow), transform var(--transition-slow);
+}
+
+.featuredCard:hover .featuredImage {
+  filter: grayscale(0%);
+  transform: scale(1);
+}
+
+.featuredContent {
+  padding: 3rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.25rem;
+  position: relative;
+}
+
+.featuredNumber {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  font-family: var(--font-display);
+  font-size: 8rem;
+  font-weight: 900;
+  font-style: italic;
+  color: var(--on-surface);
+  opacity: 0.05;
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+}
+
+.featuredTag {
+  font-family: var(--font-label);
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--tertiary);
+}
+
+.featuredTitle {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  color: var(--on-surface);
+  text-transform: uppercase;
+}
+
+.featuredExcerpt {
+  font-size: 0.875rem;
+  color: var(--on-surface-variant);
+  line-height: 1.7;
+}
+
+.readBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--primary);
+  transition: color var(--transition-fast), gap var(--transition-fast);
+}
+
+.readBtn:hover {
+  color: var(--primary-container);
+  gap: 1.25rem;
+}
+
+.readArrow { font-size: 1rem; }
+
+/* ── Bento Grid ── */
+.gridSection { margin-bottom: 1.5rem; }
+
+.bentoGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: auto;
+  gap: 1.5rem;
+}
+
+/* ── Base Card ── */
+.card {
+  background: var(--surface-container-high);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: relative;
+  overflow: hidden;
+  transition: background var(--transition-med), transform var(--transition-fast);
+  cursor: pointer;
+}
+
+.card:hover {
+  background: var(--surface-container-highest);
+  transform: translateY(-2px);
+}
+
+/* Noise texture overlay */
+.pebble {
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  opacity: 0.03;
+  pointer-events: none;
+}
+
+.cardWide {
+  grid-column: span 2;
+}
+
+/* ── Card with image (side by side) ── */
+.cardWithImage {
+  flex-direction: row;
+  gap: 1.5rem;
+  align-items: center;
+  padding: 1.5rem;
+}
+
+.cardImageThumb {
+  width: 120px;
+  height: 120px;
+  flex-shrink: 0;
+  overflow: hidden;
+  background: var(--surface-dim);
+}
+
+.thumbImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%);
+  transition: filter var(--transition-slow);
+}
+
+.card:hover .thumbImg { filter: grayscale(0%); }
+
+.cardBody {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+/* ── Card parts ── */
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.cardTag {
+  font-family: var(--font-label);
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--on-surface-variant);
+  display: block;
+}
+
+.cardDate {
+  font-family: var(--font-label);
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  color: var(--on-surface-variant);
+}
+
+.cardTitle {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--on-surface);
+  line-height: 1.3;
+}
+
+.cardTitleLg {
+  font-size: 1.4rem;
+  letter-spacing: -0.02em;
+}
+
+.cardTitleItalic {
+  font-style: italic;
+}
+
+.cardExcerpt {
+  font-size: 0.8rem;
+  color: var(--on-surface-variant);
+  line-height: 1.6;
+  flex-grow: 1;
+}
+
+.cardMeta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--font-label);
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  color: var(--on-surface-variant);
+}
+
+.readTime { color: var(--primary); }
+
+.cardFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(91, 64, 62, 0.2);
+}
+
+.viewLink {
+  font-family: var(--font-label);
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--on-surface);
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 4px;
+  transition: color var(--transition-fast);
+}
+
+.viewLink:hover { color: var(--primary-container); }
+
+.cardIcon { font-size: 2rem; opacity: 0.3; }
+.cardIconSm { font-size: 1.25rem; }
+
+/* ── Highlight card ── */
+.cardHighlight {
+  background: var(--primary-container);
+  color: var(--on-primary-container);
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 240px;
+}
+
+.cardHighlight:hover {
+  background: var(--primary-container);
+  filter: brightness(1.1);
+  transform: translateY(-2px);
+}
+
+.highlightAcronym {
+  position: absolute;
+  bottom: -1.5rem;
+  right: 0.5rem;
+  font-family: var(--font-display);
+  font-size: 9rem;
+  font-weight: 900;
+  font-style: italic;
+  color: var(--on-primary);
+  opacity: 0.1;
+  line-height: 1;
+  user-select: none;
+  pointer-events: none;
+}
+
+.highlightBody { position: relative; z-index: 1; }
+
+.highlightTag {
+  font-family: var(--font-label);
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(92, 0, 8, 0.7);
+  font-weight: 700;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.highlightTitle {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 1.5rem;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: var(--on-primary-container);
+  line-height: 1.1;
+}
+
+.highlightArrow {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: var(--on-primary-container);
+  color: var(--primary-container);
+  font-size: 1rem;
+  border-radius: 2px;
+  transition: transform var(--transition-fast);
+  align-self: flex-start;
+}
+
+.highlightArrow:hover { transform: translate(3px, -3px); }
+
+/* ── Newsletter ── */
+.newsletter {
+  background: var(--surface-container-highest);
+  padding: 4rem 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.newsletterInner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+  position: relative;
+  z-index: 1;
+}
+
+.newsletterTitle {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: 900;
+  font-style: italic;
+  letter-spacing: -0.03em;
+  color: var(--on-surface);
+}
+
+.newsletterSub {
+  font-size: 0.875rem;
+  color: var(--on-surface-variant);
+  margin-top: 0.5rem;
+  line-height: 1.6;
+  max-width: 400px;
+}
+
+.newsletterForm {
+  display: flex;
+  flex-shrink: 0;
+}
+
+.newsletterInput {
+  background: var(--surface-dim);
+  border: none;
+  border-bottom: 2px solid var(--outline);
+  color: var(--on-surface);
+  font-family: var(--font-label);
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  padding: 1rem 1.25rem;
+  width: 260px;
+  outline: none;
+  transition: border-color var(--transition-fast);
+}
+
+.newsletterInput:focus { border-bottom-color: var(--primary-container); }
+.newsletterInput::placeholder { color: var(--outline); }
+
+.newsletterBtn {
+  background: var(--primary);
+  color: var(--on-primary);
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border: none;
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+  transition: transform var(--transition-fast);
+  white-space: nowrap;
+}
+
+.newsletterBtn:hover { transform: skewX(-6deg); }
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .bentoGrid { grid-template-columns: repeat(2, 1fr); }
+  .cardWide { grid-column: span 2; }
+}
+
+@media (max-width: 768px) {
+  .page { padding-left: 1.5rem; padding-right: 1.5rem; }
+  .titleRow { grid-template-columns: 1fr; gap: 1.5rem; }
+  .featuredCard { grid-template-columns: 1fr; }
+  .featuredImageWrap { height: 220px; }
+  .bentoGrid { grid-template-columns: 1fr; }
+  .cardWide { grid-column: span 1; }
+  .cardWithImage { flex-direction: column; }
+  .cardImageThumb { width: 100%; height: 180px; }
+  .newsletterInner { flex-direction: column; align-items: flex-start; }
+  .newsletterForm { flex-direction: column; width: 100%; }
+  .newsletterInput { width: 100%; }
+  .newsletter { padding: 3rem 1.5rem; }
+}
