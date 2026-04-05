@@ -1,25 +1,17 @@
-// ============================================================
-// FOOTER.JSX — Shared footer with Netlify contact form
-//
-// HOW NETLIFY FORMS WORK:
-//   1. Netlify detects the `data-netlify="true"` attribute at build time
-//   2. Form submissions are captured automatically — no backend needed
-//   3. View submissions in your Netlify dashboard → Forms tab
-//   4. To get email notifications: Netlify dashboard → Forms → Settings → Notifications
-// ============================================================
+// FOOTER with Netlify contact form
+
 import { useState } from 'react'
 import styles from './Footer.module.css'
 
-// ── Social links — edit href values with your real URLs ──
+// ── Social links ──
 const socialLinks = [
-  { label: 'Email',     href: 'mailto:you@email.com' },
-  { label: 'LinkedIn',  href: 'https://linkedin.com/in/yourprofile' },
-  { label: 'GitHub',    href: 'https://github.com/yourusername' },
-  { label: 'Instagram', href: 'https://instagram.com/yourhandle' },
+  { label: 'Email',     href: 'mailto:juniorta@buffalo.edu' },
+  { label: 'LinkedIn',  href: 'https://www.linkedin.com/in/juniorta' },
+  { label: 'GitHub',    href: 'https://github.com/junior-ta' },
 ]
 
 export default function Footer() {
-  // Form state
+  //Contact Form state
   const [formData, setFormData] = useState({ name: '', email: '', message: '' })
   const [status, setStatus]     = useState('idle') // 'idle' | 'sending' | 'success' | 'error'
 
@@ -27,8 +19,7 @@ export default function Footer() {
     setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }))
   }
 
-  // ── Netlify form submission handler ──
-  // Uses fetch to submit without page reload
+  // Form submission handler
   const handleSubmit = async (e) => {
     e.preventDefault()
     setStatus('sending')
@@ -39,7 +30,7 @@ export default function Footer() {
         ...formData,
       }).toString()
 
-      const res = await fetch('/', {
+      const res = await fetch('/', { // I Used fetch to submit without page reload
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: encoded,
@@ -64,21 +55,20 @@ export default function Footer() {
         <div className={styles.pebble} />
 
         <div className={styles.contactInner}>
-          {/* Left: headline */}
+          {/* Leftside */}
           <div className={styles.contactLeft}>
             <span className={styles.superLabel}>FREE AGENCY</span>
             <h2 className={styles.contactTitle}>
-              SIGN THE<br />
-              <span className={styles.contactTitleAccent}>PLAYER.</span>
+              SIGN <br />
+              <span className={styles.contactTitleAccent}>ME!</span>
             </h2>
             <p className={styles.contactSub}>
-              Open for internships, projects, and high-performance collaborations.
+              Open for internships, projects, and learning opportunities.
             </p>
           </div>
 
-          {/* Right: form */}
-          {/* 
-            IMPORTANT FOR NETLIFY:
+          {/* Rightside
+
             The hidden input `form-name` and the `data-netlify` attribute
             are what allow Netlify to detect and capture this form.
             Do NOT remove them.
@@ -104,7 +94,7 @@ export default function Footer() {
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  placeholder="John Doe"
+                  placeholder="Michael Jordan"
                   required
                 />
               </div>
@@ -119,7 +109,7 @@ export default function Footer() {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  placeholder="scout@team.com"
+                  placeholder="GM@knicks.com"
                   required
                 />
               </div>
@@ -127,14 +117,14 @@ export default function Footer() {
 
             {/* Message field */}
             <div className={styles.formGroup}>
-              <label className={styles.label} htmlFor="message">THE SCOUTING BRIEF (MESSAGE)</label>
+              <label className={styles.label} htmlFor="message">WHY DO YOU WANT ME? (MESSAGE)</label>
               <textarea
                 className={`${styles.input} ${styles.textarea}`}
                 id="message"
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
-                placeholder="Tell me about the opportunity..."
+                placeholder="You can email me directly at juniorta@buffalo.edu"
                 rows={5}
                 required
               />
@@ -146,7 +136,7 @@ export default function Footer() {
               className={styles.submitBtn}
               disabled={status === 'sending'}
             >
-              {status === 'sending' ? 'SENDING...' : 'SUBMIT FOR REVIEW'}
+              {status === 'sending' ? 'SENDING...' : 'SUBMIT'}
             </button>
 
             {/* Success / error messages */}
@@ -157,18 +147,18 @@ export default function Footer() {
             )}
             {status === 'error' && (
               <p className={styles.errorMsg}>
-                Something went wrong. Try emailing me directly.
+                Something went wrong. Try emailing me directly (link below).
               </p>
             )}
           </form>
         </div>
       </section>
 
-      {/* ── Bottom bar ── */}
+      {/* The Bottom bar */}
       <div className={styles.bottomBar}>
         <div>
-          <span className={styles.logoText}>JT PERFORMANCE</span>
-          <p className={styles.copyright}>© 2024 JT Performance. All Rights Reserved.</p>
+          <span className={styles.logoText}>JT PORTFOLIO</span>
+          <p className={styles.copyright}>© 2026 JT the future GOAT.</p>
         </div>
 
         {/* Social links */}

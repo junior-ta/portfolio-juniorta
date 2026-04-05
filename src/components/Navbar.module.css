@@ -1,0 +1,157 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background: rgba(19, 19, 19, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  transition: box-shadow var(--transition-med);
+}
+
+.scrolled {
+  box-shadow: 0 4px 40px rgba(0, 0, 0, 0.5);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 3rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* ── Logo ── */
+.logo {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 1.5rem;
+  color: var(--primary-container);
+  letter-spacing: -0.05em;
+  font-style: italic;
+  transition: transform var(--transition-fast);
+}
+.logo:hover {
+  transform: skewX(-6deg) scale(1.05);
+}
+
+/* ── Links ── */
+.links {
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.link {
+  font-family: var(--font-display);
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: var(--on-surface-variant);
+  transition: color var(--transition-fast), transform var(--transition-fast);
+}
+
+.link:hover {
+  color: var(--primary);
+  transform: skewX(-6deg) scale(1.05);
+}
+
+.active {
+  color: var(--primary-container);
+  border-bottom: 2px solid var(--primary-container);
+  padding-bottom: 2px;
+}
+
+/* ── Right side ── */
+.right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* ── Contact Button ── */
+.contactBtn {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background: var(--primary-container);
+  color: var(--on-primary-container);
+  padding: 0.5rem 1.25rem;
+  border-radius: 2px;
+  transition: transform var(--transition-fast), opacity var(--transition-fast);
+}
+
+.contactBtn:hover {
+  transform: skewX(-6deg);
+  opacity: 0.9;
+}
+
+/* ── Hamburger (mobile) ── */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.bar1, .bar2, .bar3,
+.bar1Open, .bar2Open, .bar3Open {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--on-surface);
+  transition: all 0.3s ease;
+}
+
+.bar1Open { transform: rotate(45deg) translate(5px, 5px); }
+.bar2Open { opacity: 0; }
+.bar3Open { transform: rotate(-45deg) translate(5px, -5px); }
+
+/* ── Mobile Menu ── */
+.mobileMenu {
+  display: flex;
+  flex-direction: column;
+  background: var(--surface-container-low);
+  padding: 1rem 2rem;
+  border-top: 1px solid rgba(91, 64, 62, 0.3);
+}
+
+.mobileLink {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--on-surface-variant);
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(91, 64, 62, 0.15);
+}
+
+.mobileLinkActive { color: var(--primary-container); }
+
+.mobileContact {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background: var(--primary-container);
+  color: var(--on-primary-container);
+  padding: 0.75rem 1.25rem;
+  border-radius: 2px;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .nav { padding: 1rem 1.5rem; }
+  .links { display: none; }
+  .contactBtn { display: none; }
+  .hamburger { display: flex; }
+}

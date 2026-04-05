@@ -1,13 +1,11 @@
-// ============================================================
-// NAVBAR.JSX — Fixed top navigation bar
-// To add new pages: add an entry to the `navLinks` array
-// ============================================================
+// Top navigation bar
+
 import { useState, useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
 import styles from './Navbar.module.css'
 
-// ── Navigation links config ──
-// Add or remove pages by editing this array
+//Navigation links config
+  // Add or remove pages by editing this array
 const navLinks = [
   { label: 'Resume',       path: '/' },
   { label: 'Life Diary',   path: '/life-diary' },
@@ -29,12 +27,12 @@ export default function Navbar() {
     <header className={`${styles.header} ${scrolled ? styles.scrolled : ''}`}>
       <nav className={styles.nav}>
 
-        {/* ── Logo ── */}
+        {/* Logo */}
         <NavLink to="/" className={styles.logo}>
           JT
         </NavLink>
 
-        {/* ── Desktop Links ── */}
+        {/* Desktop Links */}
         <div className={styles.links}>
           {navLinks.map(({ label, path }) => (
             <NavLink
@@ -50,14 +48,13 @@ export default function Navbar() {
           ))}
         </div>
 
-        {/* ── Contact CTA ── */}
+        {/* Contact CTA */}
         <div className={styles.right}>
-          {/* Scrolls to the contact form at the bottom of any page */}
           <a href="#contact" className={styles.contactBtn}>
             Contact
           </a>
 
-          {/* ── Mobile hamburger ── */}
+          {/* For Mobile hamburger */}
           <button
             className={styles.hamburger}
             onClick={() => setMenuOpen(!menuOpen)}
@@ -70,7 +67,7 @@ export default function Navbar() {
         </div>
       </nav>
 
-      {/* ── Mobile Dropdown ── */}
+      {/* For Mobile Dropdown */}
       {menuOpen && (
         <div className={styles.mobileMenu}>
           {navLinks.map(({ label, path }) => (
