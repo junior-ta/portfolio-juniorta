@@ -1,6 +1,4 @@
-// ============================================================
-// Stores all content for the Resume page
-// ============================================================
+//  Stores all content for the Resume page
 
 export const hero = {
   // ── My profile section ──
@@ -52,71 +50,104 @@ export const languages = [
 
 // ── Work experience entries — most recent first ──
 export const workExperience = [
-  {
-    role:     'Software Engineering Intern',
-    company:  'TECH ATHLETICS CORP.',
-    period:   '2023 – PRESENT',
-    // Add or remove bullet points
+    {
+    role:     'Machine Learning Research Assistant ',
+    company:  'Canon Stroke and Vascular Research Center.',
+    period:   'May 2025 – PRESENT',
     bullets: [
-      'Orchestrated microservices for real-time player analytics.',
-      'Optimized database queries reducing latency by 40%.',
+      'Implemented image processing, data augmentation, and CNN training techniques to improve classification of vascular structures.',
+      'Engineered a U-Net architecture to isolate aneurism from DSA images, peaking at a 0.81 Dice score and faster inference.',
+      'Refactored thousands of lines of Machine learning training code to make training loops and architectures easily customizable.',
     ],
   },
-  {
-    role:     'Full Stack Developer',
-    company:  'HOOPMETRIC SYSTEMS',
-    period:   '2022 – 2023',
+
+    {
+    role:     'IBM Z Student Ambassador & Club President',
+    company:  'IBM Z Student Ambassador program by Your Big Year.',
+    period:   'April 2025 – PRESENT',
     bullets: [
-      'Designed and implemented a responsive dashboard for scout reports.',
-      'Integrated 3rd party APIs for global sports data ingestion.',
+      'Led 15+ hands-on workshops on COBOL, JCL, Linux/USS, DB2, and IBM Z mainframe systems, introducing students to enterprise-scale computing and systems architecture. ',
+      'Founded and lead a student organization by planning technical events, coordinating weekly executive board meetings, and driving student adoption of the IBM Z Xplore platform. ',
+      'Earned 5+ IBM digital badges and translated complex systems concepts into clear technical presentations and peer mentorship. ',
+    ],
+  },
+
+    {
+    role:     'International Ambassador Leader',
+    company:  'University at Buffalo International Admissions,',
+    period:   'Novemebr 2023 – PRESENT',
+    bullets: [
+      'Engaged with over 200 prospective international students through panels, events, and campus tours.',
+      'Produced, edited, and selected engaging video content for Instagram and TikTok to support international student outreach; one Instagram Reel garnered over 1.3 million interactions. ',
+      'Collaborated with 10 ambassadors to plan and execute strategic year-round campaigns and events that boosted international student recruitment and global enrollment by 12%. ',
+    ],
+  },
+
+    {
+    role:     'Conference Host (Summer) and Student Assistant (Fall & Spring)',
+    company:  'University at Buffalo Campus Living.',
+    period:   'May 2024 – PRESENT',
+    bullets: [
+      'Collaborated with a team of 21 student staff to make the summer programs’ experience great.',
+      'Used a large database of students and guests hosted by StarRezWeb to perform check-ins/outs, issue keys, and resolve operational issues.',
+      'Sorted and distributed incoming mail and packages with attention to detail, while maintaining confidentiality and ensuring compliance with campus housing policies. ',
+    ],
+  },
+
+  {
+    role:     'Software Developer Intern (2 months immersion program for highschoolers)',
+    company:  'Expert 3DEV Sarl',
+    period:   'July 2022 – August 2022',
+    bullets: [
+      'Gained hands-on experience in collaborative development, utilizing Git and GitHub for version control, code sharing, and teamwork on collective projects.',
+      '· Strengthened critical thinking skills through active mentorship and challenge-solving.',
+      'Built a basic inventory management system using Visual Basic and SQL.',
     ],
   },
 ]
 
-// ── Certifications — add your badge images in /public/badges/ ──
-// imageUrl can be a URL or a local path like '/badges/aws.png'
+//Certifications──
 export const certifications = [
   {
-    title:    'AWS Cloud Practitioner',
-    issuer:   'Amazon Web Services',
-    date:     'JAN 2024',
-    imageUrl: 'https://images.credly.com/size/340x340/images/00634f82-b07f-4bbd-a6bb-53de397fc3a6/image.png',
-    credlyUrl: 'https://www.credly.com/', // Link to your Credly badge page
+    title:    'IBM Z Xplore - Advanced',
+    issuer:   'IBM',
+    date:     'May 2025',
+    imageUrl: 'https://images.credly.com/size/680x680/images/9dde9b48-6cec-4bc4-ab33-ffeac5c681c3/image.png',
+    credlyUrl: 'https://www.credly.com/earner/earned/badge/5a17af02-b017-4c84-865e-2372af7d8d63',
   },
   {
-    title:    'Google UX Design',
-    issuer:   'Google / Coursera',
-    date:     'MAR 2024',
-    imageUrl: 'https://images.credly.com/size/340x340/images/5b5c5560-9da7-4ae2-8877-9dbe1b7e0c07/blob',
-    credlyUrl: 'https://www.credly.com/',
+    title:    'Enterprise Design Thinking Practitioner',
+    issuer:   'IBM',
+    date:     'October 2025',
+    imageUrl: 'https://images.credly.com/size/680x680/images/520b12b6-dac0-4731-a4f6-e41427201422/BadgeEmblem_EnterpriseDesignThinkingPractitioner.png',
+    credlyUrl: 'https://www.credly.com/earner/earned/badge/f941b39f-c231-49dd-8aee-78b7c81b63bb',
   },
   {
-    title:    'React Developer',
-    issuer:   'Meta',
-    date:     'JUN 2024',
-    imageUrl: 'https://images.credly.com/size/340x340/images/9267a387-1a51-4ebe-8c05-976a5ec4c3d0/image.png',
-    credlyUrl: 'https://www.credly.com/',
+    title:    'IBM Z and LinuxONE Community Contributor - 2025 (Level 1)',
+    issuer:   'IBM',
+    date:     'December 2025',
+    imageUrl: 'https://images.credly.com/size/680x680/images/23f1ef9b-33f5-4d62-b153-fc5f0683cb0e/IBM_20Z_20and_20LinuxONE_20Community_20Contributor_202025_20Level_201.png',
+    credlyUrl: 'https://www.credly.com/earner/earned/badge/75aec416-740d-4c68-aff9-55d626369d17',
   },
-  // ── Add more certifications here ──
-  // {
-  //   title: 'Your Cert',
-  //   issuer: 'Issuing Body',
-  //   date: 'MON YEAR',
-  //   imageUrl: '/badges/your-badge.png',
-  //   credlyUrl: 'https://credly.com/...',
-  // }
+  {
+    title:    'IBM Z Day 2025 - AI & Data',
+    issuer:   'IBM',
+    date:     'December 2025',
+    imageUrl: 'https://images.credly.com/size/680x680/images/6723c6fb-7220-4861-81e0-defe48981ba1/IBM_20Z_20Day_202025_20AI_20and_20Data.png',
+    credlyUrl: 'https://www.credly.com/earner/earned/badge/0b02845a-bdb5-44a2-9177-f9aebff70a5d',
+  },
 ]
 
 // ── Technical skills — group them however you like ──
 export const skills = [
-  { icon: '⌨️',  label: 'Python / C++',      category: 'Languages' },
-  { icon: '⚛️',  label: 'React / Node.js',    category: 'Frameworks' },
-  { icon: '🗄️',  label: 'SQL / NoSQL',        category: 'Databases' },
-  { icon: '☁️',  label: 'AWS / Docker',       category: 'Cloud' },
-  { icon: '🎨',  label: 'System Design',      category: 'Architecture' },
+  { icon: '⌨️',  label: 'Python/ Java/ Javascript/ C/ Cobol/ OCaml',      category: 'Languages' },
+  { icon: '🖥️',  label: 'JCL/ DB2/ SQL/ Cobol/ Linux/ Zowe',      category: 'Mainframes' },
+  { icon: '⚛️',  label: 'ML Algos/ Deep Neural Networks & CNN/ PyTorch/ Scitkit-Learn/ LLMs',    category: 'AI/ML' },
+  { icon: '📊',  label: 'DBMS/ Pandas/ Numpy/ Power BI/ Streamlit/ MatPlot, Seaborn...',     category: 'Data' },
+  { icon: '🗄️',  label: 'SQL / PostGreSQL',        category: 'Databases' },
+  { icon: '☁️',  label: 'GCP / AWS/ Docker',       category: 'Cloud' },
   { icon: '⚙️',  label: 'Git / Workflows',    category: 'DevOps' },
-  { icon: '📊',  label: 'Data Analytics',     category: 'Data' },
-  { icon: '🔌',  label: 'RESTful APIs',       category: 'Integration' },
+
 ]
 
 // ── Featured projects ──
