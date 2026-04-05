@@ -1,7 +1,3 @@
-// ============================================================
-// pages/LifeDiary.jsx — The Life Diary blog page
-// To add posts: edit src/data/diary.js → posts array
-// ============================================================
 import styles from './LifeDiary.module.css'
 import { diaryMeta, posts } from '../data/diary.js'
 
@@ -122,29 +118,6 @@ export default function LifeDiary() {
           </article>
         </section>
       )}
-
-      {/* ── Newsletter CTA ── */}
-      <section className={styles.newsletter}>
-        <div className={styles.newsletterInner}>
-          <div className={styles.newsletterLeft}>
-            <h2 className={styles.newsletterTitle}>JOIN THE SCOUTING REPORT.</h2>
-            <p className={styles.newsletterSub}>
-              Weekly insights on performance, design, and culture delivered straight to your inbox.
-            </p>
-          </div>
-          <div className={styles.newsletterForm}>
-            {/* This is a simple UI-only form — full submission is handled in Footer */}
-            <input
-              type="email"
-              placeholder="EMAIL ADDRESS"
-              className={styles.newsletterInput}
-            />
-            <button className={styles.newsletterBtn}>SUBSCRIBE</button>
-          </div>
-          {/* Decorative envelope icon */}
-          <div className={styles.envelopeDecor}>✉</div>
-        </div>
-      </section>
 
     </main>
   )

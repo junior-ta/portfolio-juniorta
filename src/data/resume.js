@@ -33,15 +33,21 @@ export const education = {
 
 export const scoutingReport = {
   // ── Bio section ──
-  text: `A fast-learning versatile developer with a team and championship mindset.
-   JT bridges the gap between high-performance athletics and complex system architecture. Just as a point guard orchestrates the floor, JT orchestrates data structures and user experiences to deliver impact at scale. Dedicated to the "Mamba Mentality" of continuous iteration and technical mastery.`,
+  text: `"A fast-learning versatile developer with a team and championship mindset."
+    I am just a little kid from Yaounde, Cameroon who moved to the US to pursue my dreams becoming a voice in the Tech industry. 
+    Early on, I was the kid troubleshooting everyone's phone and computer at home, filming and editing videos for his multiple YouTube channels, and spending nights building 
+    games on scratch 3d while watching youtube tutorials on how to build games on Unity 3d. 
+    This is my life!
+    
+    I cant talk about my life without mentioning sports! It represents a big chunk of me and has a huge place in my daily life.  I practice and watch Basketball, Football, Tennis...
+    A fun fact about me is I was a writer for a french NBA media at 14.`,
 }
 
 // ── Languages  ──
 export const languages = [
   { lang: 'French',  level: 'Native',  flag: '🇫🇷', bar: 100 },
   { lang: 'English', level: 'Fluent',  flag: '🇺🇸', bar: 95  },
-  { lang: 'Spanish', level: 'Just started learning', flag: '🇪🇸', bar: 60 },
+  { lang: 'Spanish', level: 'Just started learning', flag: '🇪🇸', bar: 15 },
 ]
 
 // ── Work experience entries — most recent first ──

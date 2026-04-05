@@ -1,7 +1,3 @@
-// ============================================================
-// pages/Publications.jsx — Editorial publications page
-// To edit content: src/data/publications.js
-// ============================================================
 import styles from './Publications.module.css'
 import { pubMeta, articles } from '../data/publications.js'
 
@@ -136,27 +132,6 @@ export default function Publications() {
               </article>
             )
           })}
-        </div>
-      </section>
-
-      {/* ── Newsletter CTA ── */}
-      <section className={styles.newsletter}>
-        <div className={styles.pebble} />
-        <div className={styles.newsletterInner}>
-          <div>
-            <h2 className={styles.newsletterTitle}>JOIN THE ROSTER</h2>
-            <p className={styles.newsletterSub}>
-              Receive weekly deep-dives into athletic performance, design systems, and court culture.
-            </p>
-          </div>
-          <div className={styles.newsletterForm}>
-            <input
-              type="email"
-              placeholder="SCOUT@TEAM.COM"
-              className={styles.newsletterInput}
-            />
-            <button className={styles.newsletterBtn}>SUBSCRIBE</button>
-          </div>
         </div>
       </section>
 

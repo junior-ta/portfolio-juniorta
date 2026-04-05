@@ -1,17 +1,16 @@
 // ============================================================
 // pages/Resume.jsx — Main portfolio / resume page
 //
-// SECTIONS (in order):
-//   1. Hero
-//   2. Scouting Report (bio)
-//   3. Work Experience
-//   4. Languages          ← NEW
-//   5. Certifications     ← NEW
-//   6. Technical Arsenal (skills)
-//   7. Featured Projects
-//
-// To edit content, open: src/data/resume.js
+// SECTIONS:
+//   1. Me
+//   2. Bio
+//   3. Languages
+//   4.Featured Projects
+//   5.Featured Projects
+//   6. Certifications
+//   7. Skills
 // ============================================================
+
 import styles from './Resume.module.css'
 import {
   hero, education, scoutingReport,
@@ -22,11 +21,9 @@ export default function Resume() {
   return (
     <main className={styles.page}>
 
-      {/* ══════════════════════════════════════
-          SECTION 1 — HERO
-      ══════════════════════════════════════ */}
+      {/* ME */}
       <section className={styles.hero}>
-        {/* Profile photo */}
+        {/* Photo */}
         <div className={styles.heroPhoto}>
           <img src={hero.photoSrc} alt={hero.photoAlt} className={styles.photo} />
           <span className={styles.statusBadge}>{hero.status}</span>
@@ -61,62 +58,23 @@ export default function Resume() {
               </div>
             </div>
             <div>
-              <p className={styles.courseLabel}>RELEVANT SCOUTING REPORT:</p>
+              <p className={styles.courseLabel}>RELEVANT COURSES:</p>
               <p className={styles.courses}>{education.courses.join(', ')}</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ══════════════════════════════════════
-          SECTION 2 — THE SCOUTING REPORT (bio)
-      ══════════════════════════════════════ */}
+      {/*BIO */}
       <section className={styles.section}>
         <div className={styles.scoutCard}>
           <div className={styles.pebble} />
-          <p className={styles.superLabelCenter}>THE SCOUTING REPORT</p>
+          <p className={styles.superLabelCenter}>THE SCOUTING REPORT (MY STORY)</p>
           <p className={styles.scoutText}>{scoutingReport.text}</p>
         </div>
       </section>
 
-      {/* ══════════════════════════════════════
-          SECTION 3 — WORK EXPERIENCE
-      ══════════════════════════════════════ */}
-      <section className={styles.section}>
-        <div className={styles.sectionHeader}>
-          <span className={styles.sectionTag}>SEASON RECORDS</span>
-          <h2 className={styles.sectionTitle}>WORK EXPERIENCE</h2>
-        </div>
-
-        <div className={styles.workGrid}>
-          {workExperience.map((job, i) => (
-            <div key={i} className={styles.workCard}>
-              {/* Job title + period */}
-              <div className={styles.workTop}>
-                <div>
-                  <h3 className={styles.workRole}>{job.role}</h3>
-                  <p className={styles.workCompany}>{job.company}</p>
-                </div>
-                <span className={styles.workPeriod}>{job.period}</span>
-              </div>
-              {/* Bullet points */}
-              <ul className={styles.workBullets}>
-                {job.bullets.map((b, j) => (
-                  <li key={j} className={styles.workBullet}>
-                    <span className={styles.bulletDot} />
-                    {b}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* ══════════════════════════════════════
-          SECTION 4 — LANGUAGES
-          To add a language: edit src/data/resume.js → languages array
-      ══════════════════════════════════════ */}
+      {/*LANGUAGES*/}
       <section className={styles.section}>
         <div className={styles.sectionHeader}>
           <span className={styles.sectionTag}>GLOBAL GAME</span>
@@ -140,6 +98,65 @@ export default function Resume() {
                   style={{ width: `${bar}%` }}
                 />
               </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* PROJECTS */}
+      <section className={styles.section}>
+        <div className={styles.sectionHeader}>
+          <span className={styles.sectionTag}>HIGHLIGHT REEL</span>
+          <h2 className={styles.sectionTitle}>FEATURED PROJECTS</h2>
+        </div>
+
+        <div className={styles.projectGrid}>
+          {projects.map((proj) => (
+            <a key={proj.id} href={proj.link} className={styles.projectCard}>
+              <div className={styles.projectImgWrap}>
+                <img
+                  src={proj.imageSrc}
+                  alt={proj.imageAlt}
+                  className={styles.projectImg}
+                />
+                <div className={styles.projectOverlay} />
+              </div>
+              <div className={styles.projectInfo}>
+                <span className={styles.projectTag}>{proj.tag}</span>
+                <h3 className={styles.projectTitle}>{proj.title}</h3>
+              </div>
+            </a>
+          ))}
+        </div>
+      </section>
+
+      {/* WORK EXPERIENCE */}
+      <section className={styles.section}>
+        <div className={styles.sectionHeader}>
+          <span className={styles.sectionTag}>CAREER STATS</span>
+          <h2 className={styles.sectionTitle}>WORK EXPERIENCE</h2>
+        </div>
+
+        <div className={styles.workGrid}>
+          {workExperience.map((job, i) => (
+            <div key={i} className={styles.workCard}>
+              {/* Job title + period */}
+              <div className={styles.workTop}>
+                <div>
+                  <h3 className={styles.workRole}>{job.role}</h3>
+                  <p className={styles.workCompany}>{job.company}</p>
+                </div>
+                <span className={styles.workPeriod}>{job.period}</span>
+              </div>
+              {/* Bullet points */}
+              <ul className={styles.workBullets}>
+                {job.bullets.map((b, j) => (
+                  <li key={j} className={styles.workBullet}>
+                    <span className={styles.bulletDot} />
+                    {b}
+                  </li>
+                ))}
+              </ul>
             </div>
           ))}
         </div>
@@ -179,19 +196,16 @@ export default function Resume() {
         </div>
       </section>
 
-      {/* ══════════════════════════════════════
-          SECTION 6 — TECHNICAL ARSENAL (skills)
-          To add skills: edit src/data/resume.js → skills array
-      ══════════════════════════════════════ */}
+      {/* SKILLS*/}
       <section className={styles.section}>
         <div className={styles.arsenalWrap}>
           <div className={styles.arsenalLeft}>
             <h2 className={styles.arsenalTitle}>
-              TECHNICAL<br />
-              <span className={styles.arsenalTitleAccent}>ARSENAL</span>
+              BAG<br />
+              <span className={styles.arsenalTitleAccent}>TECHNICAL SKILLS</span>
             </h2>
             <p className={styles.arsenalSub}>
-              The tools used to dominate the development court. Expert proficiency in modern stacks and high-concurrency environments.
+              "Soft skills are like oil that greases the wheels of business success." 
             </p>
           </div>
 
@@ -204,36 +218,6 @@ export default function Resume() {
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* ══════════════════════════════════════
-          SECTION 7 — FEATURED PROJECTS
-          To add projects: edit src/data/resume.js → projects array
-      ══════════════════════════════════════ */}
-      <section className={styles.section}>
-        <div className={styles.sectionHeader}>
-          <span className={styles.sectionTag}>HIGHLIGHT REEL</span>
-          <h2 className={styles.sectionTitle}>FEATURED PROJECTS</h2>
-        </div>
-
-        <div className={styles.projectGrid}>
-          {projects.map((proj) => (
-            <a key={proj.id} href={proj.link} className={styles.projectCard}>
-              <div className={styles.projectImgWrap}>
-                <img
-                  src={proj.imageSrc}
-                  alt={proj.imageAlt}
-                  className={styles.projectImg}
-                />
-                <div className={styles.projectOverlay} />
-              </div>
-              <div className={styles.projectInfo}>
-                <span className={styles.projectTag}>{proj.tag}</span>
-                <h3 className={styles.projectTitle}>{proj.title}</h3>
-              </div>
-            </a>
-          ))}
         </div>
       </section>
 

@@ -1,9 +1,4 @@
-/* ============================================================
-   GLOBAL.CSS — Design tokens, resets, and base styles
-   Modify CSS variables here to change the color scheme site-wide
-   ============================================================ */
-
-/* ── Google Fonts are loaded in index.html ── */
+/* Google Fonts are loaded in index.html */
 
 /* ── Design Tokens (CSS Variables) ── */
 :root {
