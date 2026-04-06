@@ -30,7 +30,7 @@ export default function Footer() {
         ...formData,
       }).toString()
 
-      const res = await fetch('/', { // I Used fetch to submit without page reload
+      const res = await fetch('/__forms.html', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: encoded,
@@ -78,10 +78,15 @@ export default function Footer() {
             name="contact"
             method="POST"
             data-netlify="true"
+            netlify-honeypot="bot-field"
             onSubmit={handleSubmit}
           >
             {/* Hidden field required by Netlify */}
             <input type="hidden" name="form-name" value="contact" />
+            {/* Honeypot field for spam protection — hidden from humans */}
+            <p style={{ display: 'none' }}>
+              <label>Don't fill this out: <input name="bot-field" /></label>
+            </p>
 
             <div className={styles.formRow}>
               {/* Name field */}
