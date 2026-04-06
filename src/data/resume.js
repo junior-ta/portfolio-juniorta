@@ -3,7 +3,7 @@
 export const hero = {
   // ── My profile section ──
   label:    'My Draft Profile',
-  title:    'QUICK SWITCH',
+  title:    'QUICK TWITCH',
   titleAccent: 'SWISS KNIFE.',
   // Photo: replace the src with your own image path, e.g. '/assets/photo.jpg'
   photoSrc: 'medias/me.jpg',
@@ -74,7 +74,7 @@ export const workExperience = [
 
     {
     role:     'International Ambassador Leader',
-    company:  'University at Buffalo International Admissions,',
+    company:  'University at Buffalo International Admissions.',
     period:   'Novemebr 2023 – PRESENT',
     bullets: [
       'Engaged with over 200 prospective international students through panels, events, and campus tours.',
@@ -95,12 +95,21 @@ export const workExperience = [
   },
 
   {
+    role:     'Intramurals Referee',
+    company:  'University at Buffalo Recreation.',
+    period:   'January 2024 – December 2024',
+    bullets: [
+      'Official referee for the competitive and recreational soccer intramural league of the University at Buffalo.',
+    ],
+  },
+
+  {
     role:     'Software Developer Intern (2 months immersion program for highschoolers)',
-    company:  'Expert 3DEV Sarl',
+    company:  'Expert 3DEV Sarl.',
     period:   'July 2022 – August 2022',
     bullets: [
       'Gained hands-on experience in collaborative development, utilizing Git and GitHub for version control, code sharing, and teamwork on collective projects.',
-      '· Strengthened critical thinking skills through active mentorship and challenge-solving.',
+      'Strengthened critical thinking skills through active mentorship and challenge-solving.',
       'Built a basic inventory management system using Visual Basic and SQL.',
     ],
   },
@@ -152,29 +161,50 @@ export const skills = [
 
 // ── Featured projects ──
 export const projects = [
+  //AI short video maker, NBA DATA GROUND (ADD THE ML PROJECT, AND VISUALIZAIONS FROM 460 CLASS), UNET FOR BREAST TUMORS, PEREZ WEBSITE, MEMOREY ALLOCATOR, INSTANT MESSEMGER)
   {
     id: 1,
-    tag:   'FULL STACK ENGINEERING',
-    title: 'FASTBREAK API',
-    // Replace with your own images in /public/projects/
-    imageSrc: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAn_MDVfTvXb3FCg82lnqal2YuduNde1LC3_gAHxhLI89_l7Cvfm7w44h4ZzFRZUUk347KsRVGdmsiKyMbc3yKE8hqnk6N76TYtPgBxdqed6qk098H41Xn9krlr83GFwp214jvFfhmuXVXTGCLeYg0sR5ExxPT8GzG8dBEUQjG_WzsUnZaPlA4LHty4uZzmviosHCDiX3-euswMqPlAvXueQAVsleBO2bQPbnCX0uV_BMgQIdUeoVa-relfJIunvHWE9IRiger3-w',
-    imageAlt: 'Fastbreak API project visual',
-    link: '#',
+    tag:   'GPT WRAPER WEBAPP',
+    title: 'AI Short Video Maker',
+    imageSrc: 'medias/proj1.png',
+    imageAlt: 'visual',
+    demoUrl:   'https://automated-tech-reels-generator.streamlit.app/',
+    githubUrl: 'https://github.com/junior-ta/AI-educational-video-generator', 
   },
   {
     id: 2,
-    tag:   'MACHINE LEARNING',
-    title: 'NEURAL COACH',
-    imageSrc: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDfzPCybRkuc2T1o_wAWkelha3WFPjhkTyz48_rxXgs16TvqceC5xrJi3V08wk0GvEpBYYGVE6XQKG1Him4MYNvnqhl1dz3G2fZfg0lPQ2bYSNT0p2NfQS6uZCQfyskpZSKyKNbeqjzrxw5NHitJkw5ShMnxtbLXDfCC-Pwh6Y5yQT4kvShzrvZ9wPg3pNYYzunbJNBoH_fVwTNp41SX21mV_lP38phqwZzOKf3KLeqUpriHi-163ZVSb7YzvUzjyCyoqF-P4qdsg',
-    imageAlt: 'Neural Coach project visual',
-    link: '#',
+    tag:   'DATA VISUALIZATION WEBAPP',
+    title: 'NBA DATA GROUND',
+    imageSrc: 'medias/proj2.png',
+    imageAlt: 'visual',
+    demoUrl:   'https://my-nba-data-analysis-portfolio.streamlit.app/',
+    githubUrl: 'https://github.com/junior-ta/NBA-Data-Analytics-Web-App',
   },
   {
     id: 3,
-    tag:   'SYSTEMS DESIGN',
-    title: 'ARENA CLOUD',
-    imageSrc: 'https://lh3.googleusercontent.com/aida-public/AB6AXuB4Rm9F-cBxx3dO1QS0I4gN62_hb_VVoQEhqKs4vRP-h5hMqHai8A0tRAOosZ9bYOF5rs5kS17w4XNx4XFQJs1C45ByZjxruE1W8T6O--zXZwEScGif4Gybntjy5vowtLSCIRTcLiMGJhUDEIT1W-rwH6kVOWkQ6pFO4NRIq2hr_m1pZtRA1xG0muTMxHkLewdbL07SqlQ_Nofn8wAQf6AdW3PXknV6vxj642uZKiwriOrgPgIaxBQXr6DHsfH7eJfY4cBQZIU4MQ',
+    tag:   'FULL STACK E-STORE WEBSITE',
+    title: 'CAMER MARKETPLACE',
+    imageSrc: 'medias/proj3.png',
+    imageAlt: 'visual',
+    demoUrl:   '#',
+    githubUrl: 'https://github.com/junior-ta/camer-marketplace',
+  },
+    {
+    id: 4,
+    tag:   'MY MEMORY ALLOCATOR in C',
+    title: 'MALLOC',
+    imageSrc: 'medias/proj4.png',
     imageAlt: 'Arena Cloud project visual',
-    link: '#',
+    demoUrl:   'https://github.com/ub-cse220-s25/pa4-malloc-junior-ta',
+    githubUrl: 'https://github.com/ub-cse220-s25/pa4-malloc-junior-ta',
+  },
+    {
+    id: 5,
+    tag:   'AN INSTANT MESSENGER in C',
+    title: 'IMeSSAGE',
+    imageSrc: 'medias/proj5.jpg',
+    imageAlt: 'Arena Cloud project visual',
+    demoUrl:   'https://github.com/ub-cse220-s25/pa3-im-junior-ta/tree/main',
+    githubUrl: 'https://github.com/ub-cse220-s25/pa3-im-junior-ta/tree/main',
   },
 ]
