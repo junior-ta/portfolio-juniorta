@@ -166,7 +166,7 @@ export const projects = [
     id: 1,
     tag:   'GPT WRAPER WEBAPP',
     title: 'AI Short Video Maker',
-    imageSrc: 'medias/proj1.png',
+    imageSrc: '/medias/proj1.png', 
     imageAlt: 'visual',
     demoUrl:   'https://automated-tech-reels-generator.streamlit.app/',
     githubUrl: 'https://github.com/junior-ta/AI-educational-video-generator', 
