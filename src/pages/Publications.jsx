@@ -1,7 +1,7 @@
 import styles from './Publications.module.css'
 import { pubMeta, articles } from '../data/publications.js'
 
-// Split articles by type
+// Article types
 const featured   = articles.find(a => a.featured)
 const gridItems  = articles.filter(a => !a.featured)
 
@@ -9,7 +9,7 @@ export default function Publications() {
   return (
     <main className={styles.page}>
 
-      {/* ── Page Header ── */}
+      {/* Page Header */}
       <section className={styles.pageHeader}>
         <span className={styles.superLabel}>{pubMeta.label}</span>
         <div className={styles.titleRow}>
@@ -21,7 +21,7 @@ export default function Publications() {
         </div>
       </section>
 
-      {/* ── Featured Article (hero layout) ── */}
+      {/* Featured Article (hero layout) */}
       {featured && (
         <section className={styles.featuredSection}>
           <div className={styles.featuredCard}>
@@ -37,7 +37,7 @@ export default function Publications() {
             {/* Right: content */}
             <div className={styles.featuredContent}>
               {/* Big decorative number */}
-              <div className={styles.featuredNumber}>04</div>
+              <div className={styles.featuredNumber}></div>
 
               <span className={styles.featuredTag}>{featured.tag}</span>
               <h2 className={styles.featuredTitle}>{featured.title}</h2>
@@ -52,12 +52,16 @@ export default function Publications() {
         </section>
       )}
 
-      {/* ── Article Grid (bento style) ── */}
+
+
+
+
+      {/* Article Grid (bento style) */}
       <section className={styles.gridSection}>
         <div className={styles.bentoGrid}>
 
           {gridItems.map(article => {
-            // ── Wide article card (spans 2 cols) ──
+            // Wide article card (spans 2 cols)
             if (article.wide && article.imageSrc) {
               return (
                 <article key={article.id} className={`${styles.card} ${styles.cardWide} ${styles.cardWithImage}`}>
@@ -77,13 +81,14 @@ export default function Publications() {
                       {article.readTime && (
                         <span className={styles.readTime}>⏱ {article.readTime}</span>
                       )}
+                      <a href={article.link} className={styles.viewLink}>{article.readLabel}</a>
                     </div>
                   </div>
                 </article>
               )
             }
 
-            // ── Wide article card (spans 2 cols, no image) ──
+            // Wide article card (spans 2 cols, no image)
             if (article.wide && !article.imageSrc) {
               return (
                 <article key={article.id} className={`${styles.card} ${styles.cardWide}`}>
@@ -104,7 +109,7 @@ export default function Publications() {
               )
             }
 
-            // ── Highlight card (primary-container bg) ──
+            // Highlight card (primary-container bg) 
             if (article.highlight) {
               return (
                 <article key={article.id} className={`${styles.card} ${styles.cardHighlight}`}>
@@ -118,7 +123,7 @@ export default function Publications() {
               )
             }
 
-            // ── Default card ──
+            // Default card
             return (
               <article key={article.id} className={styles.card}>
                 <div className={styles.pebble} />
@@ -127,7 +132,7 @@ export default function Publications() {
                 <p className={styles.cardExcerpt}>{article.excerpt}</p>
                 <div className={styles.cardFooter}>
                   <span className={styles.cardDate}>{article.date}</span>
-                  {article.icon && <span className={styles.cardIconSm}>🧠</span>}
+                  {article.icon && <span className={styles.cardIconSm}></span>}
                 </div>
               </article>
             )

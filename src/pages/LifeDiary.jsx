@@ -1,7 +1,7 @@
 import styles from './LifeDiary.module.css'
 import { diaryMeta, posts } from '../data/diary.js'
 
-// ── Split posts into display groups ──
+// Display types
 const featuredPost   = posts.find(p => p.featured)
 const secondaryPost  = posts.find(p => !p.featured && !p.compact && !p.imageSrc && p.id === 2)
 const imagePost      = posts.find(p => !p.featured && p.imageSrc)
@@ -12,26 +12,26 @@ export default function LifeDiary() {
   return (
     <main className={styles.page}>
 
-      {/* ── Page Header ── */}
+      {/* Header*/}
       <section className={styles.pageHeader}>
         <span className={styles.archiveLabel}>{diaryMeta.label}</span>
         <div className={styles.titleRow}>
           <h1 className={styles.pageTitle}>
             {diaryMeta.title} <span className={styles.pageTitleAccent}>{diaryMeta.titleAccent}</span>
           </h1>
-          {/* Vertical year decoration */}
+          {/* Vertical decoration */}
           <div className={styles.verticalYear}>
             <span className={styles.yearLabel}>ESTABLISHED</span>
-            <span className={styles.year}>2024</span>
+            <span className={styles.year}>2026</span>
           </div>
         </div>
         <p className={styles.subtitle}>{diaryMeta.subtitle}</p>
       </section>
 
-      {/* ── Main bento grid ── */}
+      {/*  Main bento grid  */}
       <section className={styles.mainGrid}>
 
-        {/* ── Featured big post (left, tall) ── */}
+        {/* Featured big post (left, tall) */}
         {featuredPost && (
           <article className={styles.featuredCard}>
             <div className={styles.featuredMeta}>
@@ -46,7 +46,7 @@ export default function LifeDiary() {
           </article>
         )}
 
-        {/* ── Secondary post (right, top) ── */}
+        {/* Secondary post (right, top) */}
         {secondaryPost && (
           <article className={styles.secondaryCard}>
             <span className={styles.secondaryTag}>{secondaryPost.tag}</span>
@@ -60,7 +60,7 @@ export default function LifeDiary() {
         )}
       </section>
 
-      {/* ── Secondary row: image card + culture card ── */}
+      {/* Secondary row: image card + culture card */}
       <section className={styles.secondRow}>
 
         {/* Image card */}
@@ -94,7 +94,7 @@ export default function LifeDiary() {
         )}
       </section>
 
-      {/* ── Compact list posts ── */}
+      {/* Compact list posts  */}
       {compactPosts.length > 0 && (
         <section className={styles.compactRow}>
           {compactPosts.map(post => (
