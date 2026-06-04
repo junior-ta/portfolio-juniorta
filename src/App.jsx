@@ -11,7 +11,6 @@ import Publications from './pages/Publications'
 export default function App() {
   return (
     <BrowserRouter>
-      {/* This is the top Navigation bar*/}
       <Navbar />
 
       {/* Page content — swap out pages here */}
@@ -21,7 +20,6 @@ export default function App() {
         <Route path="/publications" element={<Publications />} />
       </Routes>
 
-      {/* Footer is shared across all pages too */}
       <Footer />
     </BrowserRouter>
   )

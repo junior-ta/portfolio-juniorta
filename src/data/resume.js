@@ -17,7 +17,7 @@ export const education = {
   location:   'Buffalo, NY      [Willing to relocate for working/learning opportunity]',
   degree:     "Bachelor's in Computer Science",
   graduation: 'MAY 2027',
-  gpa:        '3.79 / 4.0',
+  gpa:        '3.82 / 4.0',
   courses: [
     'Programing Languages (OCaml) [Favorite]',
     'Data Structures (Java)',
