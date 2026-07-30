@@ -162,25 +162,25 @@ export const skills = [
 // ── Featured projects ──
 export const projects = [
   //AI short video maker, NBA DATA GROUND (ADD THE ML PROJECT, AND VISUALIZAIONS FROM 460 CLASS), UNET FOR BREAST TUMORS, PEREZ WEBSITE, MEMOREY ALLOCATOR, INSTANT MESSEMGER)
-  {
+    {
     id: 1,
+    tag:   'Windows Stocks APP',
+    title: 'What If Trading',
+    imageSrc: '/medias/whatiftrading.png', 
+    imageAlt: 'visual',
+    demoUrl:   'https://github.com/junior-ta/What_if-Stocks/releases',
+    githubUrl: 'https://github.com/junior-ta/What_if-Stocks', 
+  },
+    {
+    id: 2,
     tag:   'GPT WRAPER WEBAPP',
-    title: 'AI Short Video Maker',
+    title: 'AI Short Educational Video Maker',
     imageSrc: '/medias/proj1.png', 
     imageAlt: 'visual',
     demoUrl:   'https://automated-tech-reels-generator.streamlit.app/',
     githubUrl: 'https://github.com/junior-ta/AI-educational-video-generator', 
   },
-  {
-    id: 2,
-    tag:   'DATA VISUALIZATION WEBAPP',
-    title: 'NBA DATA GROUND',
-    imageSrc: 'medias/proj2.png',
-    imageAlt: 'visual',
-    demoUrl:   'https://my-nba-data-analysis-portfolio.streamlit.app/',
-    githubUrl: 'https://github.com/junior-ta/NBA-Data-Analytics-Web-App',
-  },
-  {
+    {
     id: 3,
     tag:   'FULL STACK E-STORE WEBSITE',
     title: 'CAMER MARKETPLACE',
@@ -189,8 +189,26 @@ export const projects = [
     demoUrl:   '#',
     githubUrl: 'https://github.com/junior-ta/camer-marketplace',
   },
-    {
+  {
     id: 4,
+    tag:   'Very Fun Video game',
+    title: 'Speed Ping-Pong',
+    imageSrc: '/medias/ponggame.png', 
+    imageAlt: 'visual',
+    demoUrl:   'https://github.com/junior-ta/1d-pong/releases',
+    githubUrl: 'https://github.com/junior-ta/1d-pong', 
+  },
+  {
+    id: 5,
+    tag:   'DATA VISUALIZATION WEBAPP',
+    title: 'NBA DATA GROUND',
+    imageSrc: 'medias/proj2.png',
+    imageAlt: 'visual',
+    demoUrl:   'https://my-nba-data-analysis-portfolio.streamlit.app/',
+    githubUrl: 'https://github.com/junior-ta/NBA-Data-Analytics-Web-App',
+  },
+    {
+    id: 6,
     tag:   'MY MEMORY ALLOCATOR in C',
     title: 'MALLOC',
     imageSrc: 'medias/proj4.png',
@@ -199,7 +217,7 @@ export const projects = [
     githubUrl: 'https://github.com/ub-cse220-s25/pa4-malloc-junior-ta',
   },
     {
-    id: 5,
+    id: 7,
     tag:   'AN INSTANT MESSENGER in C',
     title: 'IMeSSAGE',
     imageSrc: 'medias/proj5.jpg',
